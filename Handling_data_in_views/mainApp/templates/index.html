@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Fetch</title>
+</head>
+<body>
+    <h1>Fetched Data is</h1>
+        <table border="2px solid red">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            {% for i in external_data.Product %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.desc}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.qty}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>
